@@ -69,6 +69,7 @@ var buildUrlChecker = function(checksfile) {
           var present = $(checks[ii]).length > 0;
           out[checks[ii]] = present;
       }
+      fs.writeFileSync('output.json', JSON.stringify(out));
       console.log(out);
       }
   }
